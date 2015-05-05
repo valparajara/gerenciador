@@ -1,8 +1,15 @@
-<p id="notice"><%= notice %></p>
+<h1>Visualizar Questão</h1>
 
+<p id="notice"><%= notice %></p><br />
 
+<p>Código:    <%= @question.code %></p>
+<p>Enunciado: <%= @question.enunciation %></p>
+<p>Gabarito:  <%= @question.template %></p><br />
 
-
-
+<% for alternative in @question.alternatives %>
+  <p><%= alternative.alternative %>
+  <%= alternative.anwser %></p>
+<% end %>
+<br />
 <%= link_to 'Editar', edit_question_path(@question) %> |
 <%= link_to 'Voltar', questions_path %>
