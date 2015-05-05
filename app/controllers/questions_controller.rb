@@ -6,10 +6,12 @@ class QuestionsController < ApplicationController
   end
 
   def show
+
   end
 
   def new
     @question = Question.new
+    ('a'..'e').each { |alternative| @question.alternatives.build(alternative: alternative) }
   end
 
   def edit
@@ -51,6 +53,8 @@ class QuestionsController < ApplicationController
     end
 
     def question_params
-      params.require(:question).permit(:code, :enunciation, :template)
+      params.require(:question).permit(:code, :enunciation, :template, { :alternatives_attributes => [:alternative, :anwser] })
+      # params.permit(:name, {:emails => []}, :friends => [ :name, { :family => [ :name ], :hobbies => [] }])
+
     end
 end
