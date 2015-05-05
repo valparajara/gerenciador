@@ -11,9 +11,9 @@
     </div>
   <% end %>
 
-    Código    : <%= f.text_field :code %><br />
-    Enunciado : <%= f.text_area :enunciation %><br />
-    Gabarito  : <%= f.text_field :template %><br />
+    <p>Código    : <%= f.text_field :code %></p>
+    <p>Enunciado : <%= f.text_area :enunciation %></p>
+    <p>Gabarito  : <%= f.text_field :template %></p>
 
   <%= f.fields_for :alternatives do |builder| %>
     <%= render 'alternative_fields', :f => builder %>

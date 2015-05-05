@@ -4,5 +4,4 @@ class Question < ActiveRecord::Base
   accepts_nested_attributes_for :alternatives, limit: 5
 
   validates :code, :enunciation, :template, presence: true
-  # attr_accessible :alternative_attributes
 end
