@@ -13,3 +13,29 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.index-tbl{
+  text-align: center;
+  padding: 5px;
+}
+
+td {
+padding: 10px;
+}
+
+h1{
+  margin-bottom: 20px;
+}
+
+.form-control{
+  width: 50%;
+}
+
+.alternative{
+  width: 5%;
+  margin: 10px 0 10px 0;
+}
+
+.anwser{
+  width: 33%
+}

@@ -11,18 +11,18 @@
 
   <tbody>
       <tr>
-        <th>Código</th>
-        <th>Enunciado</th>
+        <th class='index-tbl'>Código</th>
+        <th class='index-tbl'>Enunciado</th>
+        <th class='index-tbl'>Ações</th>
       </tr>
         <% @questions.each do |question| %>
       <tr>
         <td><%= question.code          %></td>
         <td><%= question.enunciation   %></td>
-      </tr>
-      <tr>
-        <td><%= link_to 'Exibir', question %></td>
-        <td><%= link_to 'Editar', edit_question_path(question) %></td>
-        <td><%= link_to 'Deletar', question, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+        <td><%= link_to 'Exibir', question %>
+            <%= link_to 'Editar', edit_question_path(question) %>
+            <%= link_to 'Deletar', question, method: :delete, data: { confirm: 'Você tem certeza?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
