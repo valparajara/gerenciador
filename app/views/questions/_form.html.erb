@@ -11,19 +11,25 @@
     </div>
   <% end %>
   <div class="form-group">
-    <label for="exampleInputEmail1">Código:</label>
-    <%= f.text_field :code, { class: 'form-control' } %>
-    <label for="exampleInputEmail1">Enunciado:</label>
+    <%= f.label :code %>
+    <%= f.text_field :code, { class: 'form-control'  } %>
+
+    <%= f.label :enunciation %>
     <%= f.text_area :enunciation, { class: 'form-control', rows: '3'} %>
-    <label for="exampleInputEmail1">Gabarito:</label>
+
+    <%= f.label :template %>
     <%= f.text_field :template, { class: 'form-control' } %>
   </div>
 
-  <%= f.fields_for :alternatives do |builder| %>
-    <div class="form-group">
-      <%= render 'alternative_fields', :f => builder %>
-    </div>
-  <% end %>
+  <fieldset>
+    <legend>Alternativas</legend>
+
+    <%= f.fields_for :alternatives do |builder| %>
+      <div class="form-group">
+        <%= render 'alternative_fields', :f => builder %>
+      </div>
+    <% end %>
+  </fieldset>
 
   <div class="actions">
     <%= f.submit %>
