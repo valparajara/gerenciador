@@ -8,7 +8,7 @@
 
 <% for alternative in @question.alternatives %>
   <p><%= alternative.alternative %>
-  <%= alternative.anwser %></p>
+  <%= alternative.answer %></p>
 <% end %>
 <br />
 <%= link_to 'Editar', edit_question_path(@question) %> |

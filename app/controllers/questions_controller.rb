@@ -53,6 +53,6 @@ class QuestionsController < ApplicationController
 
     def question_params
       params.require(:question).permit(:id, :code, :enunciation, :template, {
-        :alternatives_attributes => [:id, :alternative, :anwser, :question_id] })
+        :alternatives_attributes => [:id, :alternative, :answer, :question_id] })
     end
 end

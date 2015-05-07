@@ -1,6 +1,6 @@
 class Alternative < ActiveRecord::Base
   belongs_to :question
 
-  validates :anwser, presence: true
+  validates :answer, presence: true
 
 end
