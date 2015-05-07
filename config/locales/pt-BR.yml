@@ -133,7 +133,7 @@ pt-BR:
     select:
       prompt: Por favor selecione
     submit:
-      create: Criar
+      create: Criar %{model}
       submit: Salvar
       update: Atualizar
   number:
@@ -206,13 +206,13 @@ pt-BR:
     pm: ''
 
   activerecord:
-    model:
+    models:
       question:
-        one: "questão"
-        other: "questões"
+        one: "Questão"
+        other: "Questões"
       alternative:
-        one: "alternativa"
-        other: "alternativas"
+        one: "Alternativa"
+        other: "Alternativas"
 
     attributes:
       question:
@@ -222,6 +222,7 @@ pt-BR:
       alternatives:
         anwser: "Resposta das alternativas"
       alternative:
-        anwser: "Resposto"
+        alternative: "Alternativa"
+        anwser: "Resposta"
 
 
