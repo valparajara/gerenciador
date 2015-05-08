@@ -224,5 +224,8 @@ pt-BR:
       alternative:
         alternative: "Alternativa"
         answer: "Resposta"
+      user:
+        password: "Senha"
+        remember_me: "Lembrar-me"
 
 
