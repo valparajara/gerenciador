@@ -1,33 +1,24 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Listas de questões</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <table class="table table-bordered">
+    <th>Código</th>
+    <th>Enunciado</th>
+    <th>Ações</th>
 
-  <tbody>
-      <tr>
-        <th class='index-tbl'>Código</th>
-        <th class='index-tbl'>Enunciado</th>
-        <th class='index-tbl'>Ações</th>
-      </tr>
-        <% @questions.each do |question| %>
+    <% @questions.each do |question| %>
       <tr>
         <td><%= question.code          %></td>
         <td><%= question.enunciation   %></td>
-        <td><%= link_to 'Exibir', question %>
-            <%= link_to 'Editar', edit_question_path(question) %>
-            <%= link_to 'Deletar', question, method: :delete, data: { confirm: 'Você tem certeza?' } %>
+        <td ><%= link_to '', question, { class: 'glyphicon glyphicon-zoom-in' } %>
+            <%= link_to '', edit_question_path(question), { class: 'glyphicon glyphicon-pencil' } %>
+            <%= link_to '', question, class: 'glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Você tem certeza?' } %>
         </td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+  </table>
 
-<br>
+<%= link_to 'Criar questão', new_question_path, { class: 'btn btn-default'} %>
 
-<%= link_to 'Criar questão', new_question_path %>
+
+
+

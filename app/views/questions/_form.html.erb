@@ -1,7 +1,7 @@
 <%= form_for(@question) do |f| %>
   <% if @question.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@question.errors.count, "error") %> foram encontrados:</h2>
+      <h3><%= pluralize(@question.errors.count, "error") %> foram encontrados:</h3>
 
       <ul>
       <% @question.errors.full_messages.each do |message| %>
@@ -31,7 +31,7 @@
     <% end %>
   </fieldset>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit 'Criar Questão', { class: 'btn btn-primary' } %>
+  <%= link_to 'Voltar', questions_path, { class: 'btn btn-default'} %>
+
 <% end %>

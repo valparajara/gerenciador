@@ -14,28 +14,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.index-tbl{
+th {
   text-align: center;
-  padding: 5px;
 }
 
-td {
-padding: 10px;
-}
-
-h1{
+h1 {
   margin-bottom: 20px;
 }
 
-.form-control{
-  width: 50%;
+.alert-notice {
+  @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
 }
 
-.alternative{
-  width: 5%;
-  margin: 10px 0 10px 0;
+.alert-alert {
+  @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
 }
 
-.answer{
-  width: 33%
+.alert {
+  margin-top: 10px;
 }
